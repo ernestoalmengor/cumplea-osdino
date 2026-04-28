@@ -12,6 +12,7 @@ import {
   PartyPopper,
 } from "lucide-react";
 import confetti from "canvas-confetti";
+import { useSearchParams } from "react-router-dom";
 
 const Invitacion = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +21,11 @@ const Invitacion = () => {
   const [showScrollUp, setShowScrollUp] = useState(false);
   const [sliderIndex, setSliderIndex] = useState(0);
 
-  // Captura de parámetros de URL
-  const params = new URLSearchParams(window.location.search);
-  const idInvitado = params.get("id") || "";
-  const familia = params.get("family") || "Familia Invitada";
-  const pases = parseInt(params.get("pass") || "2"); // Aseguramos que sea número
+  // Captura de parámetros de URL usando react-router-dom (compatible con HashRouter)
+  const [searchParams] = useSearchParams();
+  const idInvitado = searchParams.get("id") || "";
+  const familia = searchParams.get("family") || "Familia Invitada";
+  const pases = parseInt(searchParams.get("pass") || "2"); // Aseguramos que sea número
 
   // NUEVOS ESTADOS PARA EL FORMULARIO
   const [showForm, setShowForm] = useState(false);

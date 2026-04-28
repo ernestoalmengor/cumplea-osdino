@@ -30,9 +30,11 @@ const Admin = () => {
   }, []);
 
   const handleCopyLink = (invitado) => {
-    const baseUrl = window.location.origin;
-    // Generamos el link para la invitación
-    const link = `${baseUrl}/?id=${invitado.id}&family=${encodeURIComponent(invitado.invitacion)}&pass=${invitado.pases}`;
+    // Tomamos la URL base actual de forma dinámica, quitando el hash y query params
+    const currentUrl = window.location.href.split('#')[0].split('?')[0];
+    
+    // Generamos el link usando el formato del HashRouter
+    const link = `${currentUrl}#/?id=${invitado.id}&family=${encodeURIComponent(invitado.invitacion)}&pass=${invitado.pases}`;
     
     navigator.clipboard.writeText(link).then(() => {
       alert(`Enlace copiado para: ${invitado.invitacion}\n\nLink: ${link}`);
