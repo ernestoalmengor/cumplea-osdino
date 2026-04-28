@@ -228,9 +228,9 @@ const Invitacion = () => {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute left-[-20px] md:left-[-50px] w-[180px] md:w-[350px] object-contain z-0"
+                  className="absolute left-[-5px] md:left-[10px] w-[180px] md:w-[350px] object-contain z-0"
                 />
-                <div className="flex flex-col items-center justify-center gap-1 scale-90 md:scale-110 z-10 relative ml-24 md:ml-40">
+                <div className="flex flex-col items-center justify-center gap-1 scale-90 md:scale-110 z-10 relative ml-32 md:ml-52">
                   <span className="text-3xl md:text-5xl font-black text-green-600 uppercase">
                     Agosto
                   </span>
@@ -261,7 +261,11 @@ const Invitacion = () => {
             </motion.div>
 
             {/* CONTADOR */}
-            <div className="flex justify-center gap-2 mt-12 w-full overflow-visible">
+            <div className="w-full mt-6 flex flex-col items-center">
+              <h3 className="text-xl md:text-2xl font-black text-green-600 mb-4 tracking-wide">
+                ¿Cuánto falta?
+              </h3>
+              <div className="flex justify-center gap-2 w-full overflow-visible">
               {Object.entries(timeLeft).map(([label, value], index) => (
                 <motion.div
                   key={label}
@@ -277,6 +281,7 @@ const Invitacion = () => {
                   </span>
                 </motion.div>
               ))}
+              </div>
             </div>
           </section>
 
