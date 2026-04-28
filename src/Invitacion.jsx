@@ -35,7 +35,7 @@ const Invitacion = () => {
   const [comprobandoStatus, setComprobandoStatus] = useState(!!idInvitado);
 
   const fechaEvento = new Date("2026-08-01T15:00:00");
-  const fotos = ["/1.png", "/2.png"];
+  const fotos = ["./1.png", "./2.png"];
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -143,11 +143,11 @@ const Invitacion = () => {
               className="bg-white p-10 rounded-3xl shadow-2xl text-center max-w-sm border-4 border-green-100 relative overflow-hidden"
             >
               <img
-                src="/hoja.png"
+                src="./hoja.png"
                 className="absolute top-0 left-0 w-20 h-20 object-contain z-0"
               />
               <img
-                src="/hoja2.png"
+                src="./hoja2.png"
                 className="absolute bottom-0 right-0 w-20 h-20 object-contain z-0"
               />
               <div className="relative z-10">
@@ -224,7 +224,7 @@ const Invitacion = () => {
 
               <div className="relative flex items-center justify-center h-[200px] md:h-[350px] mt-4">
                 <motion.img
-                  src="/dino1.png"
+                  src="./dino1.png"
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.5 }}
@@ -284,7 +284,7 @@ const Invitacion = () => {
           <section
             className="min-h-screen flex items-center py-12 px-4 relative overflow-hidden"
             style={{
-              backgroundImage: "url('/fondo.png')",
+              backgroundImage: "url('./fondo.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed",
@@ -443,9 +443,10 @@ const Invitacion = () => {
           </section>
 
           {/* FOOTER */}
-          <footer className="bg-green-50 py-10 text-center text-slate-400 border-t border-green-100">
-            <p className="text-xs">
-              © 2026 Desarrollado por{" "}
+          <footer className="bg-green-50 py-6 text-center text-slate-400 text-base border-t border-green-100 snap-start">
+            <p className="text-[12px]">© 2026 Todos los derechos reservados</p>
+            <p className="text-[12px]">
+              Desarrollado con por{" "}
               <span className="font-bold text-green-500">Kevin Almengor</span>
             </p>
           </footer>
