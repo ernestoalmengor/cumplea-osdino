@@ -420,9 +420,9 @@ const Invitacion = () => {
                     (prev) => (prev - 1 + fotos.length) % fotos.length,
                   )
                 }
-                className="absolute -left-12 top-1/2 -translate-y-1/2 text-green-500 z-20"
+                className="absolute left-[-16px] md:-left-16 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-xl text-green-500 z-20 hover:scale-110 active:scale-95 transition-all border border-green-50"
               >
-                <ChevronLeft size={40} />
+                <ChevronLeft size={32} />
               </button>
               <div className="overflow-hidden rounded-[40px] shadow-2xl aspect-[3/4] relative z-10 border-4 border-green-50">
                 <AnimatePresence mode="wait">
@@ -440,9 +440,9 @@ const Invitacion = () => {
                 onClick={() =>
                   setSliderIndex((prev) => (prev + 1) % fotos.length)
                 }
-                className="absolute -right-12 top-1/2 -translate-y-1/2 text-green-500 z-20"
+                className="absolute right-[-16px] md:-right-16 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-xl text-green-500 z-20 hover:scale-110 active:scale-95 transition-all border border-green-50"
               >
-                <ChevronRight size={40} />
+                <ChevronRight size={32} />
               </button>
             </div>
           </section>
